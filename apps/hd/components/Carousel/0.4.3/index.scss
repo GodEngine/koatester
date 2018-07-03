@@ -1,0 +1,9 @@
+@include block(swiper-container) {
+  @include modifier(full) {
+    width: 100%;
+    height: 100vh;
+  }
+  @include modifier(vertical) {
+    height: 100%;
+  }
+}

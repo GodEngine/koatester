@@ -1,0 +1,63 @@
+@import "./sprite";
+$shrink-scale: 2; // 默认缩小两倍背景图
+$pro-scale: 2.4; // 选项的缩小
+$btn-scale2: 1.7; // 选项的缩小
+// 宽度 高度 位置 缩小一半
+@mixin set-sprite($i, $ratio: $shrink-scale) {
+   @include sprite($i);
+  width: nth($i, 5) / $ratio;
+  height: nth($i, 6) / $ratio;
+  background-position-y: nth($i, 4) / $ratio;
+  background-size: nth($i, 7) / $ratio;
+}
+@include block(i) {
+  display: inline-block;
+  @include element(ans1a) {
+     @include set-sprite($ans1a)
+  };
+  @include element(ans1b) {
+     @include set-sprite($ans1b)
+  };
+  @include element(ans2a) {
+     @include set-sprite($ans2a)
+  };
+  @include element(ans2b) {
+     @include set-sprite($ans2b)
+  };
+  @include element(ans3a) {
+     @include set-sprite($ans3a)
+  };
+  @include element(ans3b) {
+     @include set-sprite($ans3b)
+  };
+  @include element(ans4a) {
+     @include set-sprite($ans4a)
+  };
+  @include element(ans4b) {
+     @include set-sprite($ans4b)
+  };
+  @include element(line) {
+    position: absolute;
+    bottom: 17%;
+    right: 8%;
+    @include set-sprite($line)
+  };
+  @include element(loading) {
+     @include set-sprite($loading)
+  };
+  @include element(name-input) {
+     @include set-sprite($name-input)
+  };
+  @include element(pen) {
+     @include set-sprite($pen)
+  };
+  @include element(result-button) {
+     @include set-sprite($result-button)
+  };
+  @include element(start-button) {
+    position: absolute;
+    bottom: 12%;
+    right: 21%;
+    @include set-sprite($start-button)
+  };
+}

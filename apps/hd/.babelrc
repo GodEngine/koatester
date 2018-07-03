@@ -1,0 +1,45 @@
+{
+  "presets": [
+    ["env", [{
+      "debug": true,
+      "modules": false,
+      "targets": {
+        "browsers": [
+          ">3%",
+          "iOS >= 9",
+          "Android >= 4.4"
+        ]
+      }
+    }]],
+    "react"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-react-remove-prop-types", {
+          "mode": "wrap",
+          "ignoreFilenames": ["node_modules"]
+        }]
+      ]
+    }
+  },
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false
+    }],
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-function-bind",
+    // "transform-decorators",
+    "transform-decorators-legacy",
+    "component",
+    ["import", [{
+      "libraryName": "antd",
+      "style": "css"
+      },{
+      "style": "css",
+      "libraryName": "antd-mobile"
+    }]],
+  ]
+}

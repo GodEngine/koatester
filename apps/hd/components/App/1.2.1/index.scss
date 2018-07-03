@@ -1,0 +1,48 @@
+// Created by 刘谦 <qianliu> 112486391@qq.com
+
+@import "reset";
+
+body {
+  margin: 0 auto;
+  // max-width: 425px;
+  font-family:
+    'Helvetica Neue', Helvetica,
+    // 苹方简体，冬青黑
+    'PingFang SC', 'Hiragion Sans GB',
+    'Microsoft YaHei', '微软雅黑',
+    Arial, sans-serif;
+
+}
+
+@include block(container) {
+  // Sticky footer
+  // Reference: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer
+  display: flex;
+  min-height: 100vh;
+  height: inherit;
+  flex-direction: column;
+
+  @include element(main) {
+    flex: 1;
+    height: inherit;
+  }
+
+  @include element(footer) {
+    font-size: 0;
+  }
+
+  @include element(return-top) {
+    position: fixed;
+    display: none;
+
+    @media (max-width: 320px) {
+      transform: scale(.8);
+      transform-origin: right;
+    }
+  }
+
+  // Img Responsive
+  img {
+    max-width: 100%;
+  }
+}

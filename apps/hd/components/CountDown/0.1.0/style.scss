@@ -1,0 +1,53 @@
+.countdown {
+  text-align: center;
+}
+
+.countdown-days::after,
+.countdown-hours::after,
+.countdown-minutes::after{
+  content: ':';
+  line-height: 60px;
+  font-size: 60px;
+  vertical-align: top;
+  display: inline-block;
+  color: #000;
+}
+
+.countdown-days::before{
+   content: 'DAYS';
+}
+.countdown-hours::before{
+   content: 'HOURS';
+}
+.countdown-minutes::before{
+   content: 'MINUTES';
+}
+.countdown-seconds::before{
+   content: 'SECONDS';
+}
+
+.countdown-days::before,
+.countdown-hours::before,
+.countdown-minutes::before,
+.countdown-seconds::before{
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+
+.countdown-days,
+.countdown-hours,
+.countdown-minutes,
+.countdown-seconds {
+  display: inline-block;
+  position: relative;
+}
+@media screen and (max-width: 340px) {
+  .countdown-days::after,
+  .countdown-hours::after,
+  .countdown-minutes::after{
+    line-height: 50px;
+  }
+}

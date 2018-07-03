@@ -1,0 +1,44 @@
+// 文字溢出。。显示
+@mixin word($w) {
+  display: block;
+  width: $w;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// flex 布局
+@mixin flex($ly) {
+  display: flex;
+  justify-content: $ly;
+}
+
+// 由于 bourbon 已经不推荐使用提供的 keyframes 方法 所以这里重新写一个
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} { @content; }
+  @-moz-keyframes #{$animationName} { @content; }
+  @-o-keyframes #{$animationName} { @content; }
+  @keyframes #{$animationName} { @content; }
+}
+
+// UI色值
+$A: #3599ff;
+$B: #FFFFFF;
+$C: #ECEEF0;
+$D: #9ACCFF;
+$E: #FF873E;
+$F: #FFB119;
+$G: #F65E49;
+$H: #2A2A2E;
+$I: #79818D;
+$J: #6A6A70;
+$K: #A5A6B2;
+$L: #94AOB2;
+$M: #4774FF;
+$N: #F6F9FA;
+$O: #E6EAED;
+$P: #E1E8EA;
+$Q: #D7E3EF;
+$U: #C1CACC;
+$V: #6383AA;
+$X: #F6F7F8;
+$Y: #E2E4E7;

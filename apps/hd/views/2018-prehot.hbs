@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="option-menu" content="hide">
+  <meta name = "resumeJs" content='javascript: window.location.reload()'>
+  <title>{{title}}</title>
+  {{!-- <script type="text/javascript" src="https://os4ty6tab.qnssl.com/cblued/static/et.1c5ld961t6nnpr.js"></script>
+  <script type="text/javascript">
+    // 异常捕获
+    window.BGlobal = { errorUrl: '/catch', UserID: 'mxx', appName: 'blued-2018-anchor' }
+  </script> --}}
+<link href="https://os4ty6tab.qnssl.com/webapp/hd/2018-prehot/css/vendor-db229512.css" rel="stylesheet"><link href="https://os4ty6tab.qnssl.com/webapp/hd/2018-prehot/css/index-17f14fbf.css" rel="stylesheet"></head>
+<body>
+  <main></main>
+    <script type='text/javascript' src='{{sharebar}}'></script>
+    <script>
+      {{{baiduStatistics}}}
+      window.CONFIG = JSON.parse(decodeURIComponent('{{feConfig}}'))
+      // 图片统计
+      var img = new Image();
+      img.src = '/redirect?url=prehot';
+      img = null;
+      try {
+        var resumeJs = 'javascript: window.location.reload()';
+        bluedNative.registerResumeJs(resumeJs)
+      } catch (e) {
+        console.log(e);
+      };
+      (function(){
+        window.alert = function(name){
+          var iframe = document.createElement("IFRAME");
+          iframe.style.display="none";
+          iframe.setAttribute("src", 'data:text/plain');
+          document.documentElement.appendChild(iframe);
+          window.frames[0].window.alert(name);
+          iframe.parentNode.removeChild(iframe);
+        }
+      })()
+    </script>
+<script type="text/javascript" src="https://os4ty6tab.qnssl.com/webapp/hd/2018-prehot/js/index-dabf7469.js"></script><script type="text/javascript" src="https://os4ty6tab.qnssl.com/webapp/hd/2018-prehot/js/vendor-4f701a5f.js"></script></body>
+</html>

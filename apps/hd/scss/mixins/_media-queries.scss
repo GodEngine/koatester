@@ -1,0 +1,17 @@
+// Created by 刘谦 <qianliu> 112486391@qq.com
+// on 2017-02-10 16:46
+
+$breakpoint-5: 320px;
+$breakpoint-plus: 375px;
+
+@mixin iphone5 {
+  @media (max-width: $breakpoint-5) {
+    @content;
+  }
+}
+
+@mixin iphone-plus {
+  @media (min-width: #{$breakpoint-plus + 1}) {
+    @content;
+  }
+}

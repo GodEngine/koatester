@@ -1,0 +1,76 @@
+// Created by 刘谦 <qianliu> 112486391@qq.com
+
+@import "reset";
+
+body {
+  margin: 0 auto;
+  // max-width: 425px;
+  font-family:
+    'Helvetica Neue', Helvetica,
+    // 苹方简体，冬青黑
+    'PingFang SC', 'Hiragion Sans GB',
+    'Microsoft YaHei', '微软雅黑',
+    Arial, sans-serif;
+
+}
+
+@include block(container) {
+  // Sticky footer
+  // Reference: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer
+  display: flex;
+  min-height: 100vh;
+  height: inherit;
+  flex-direction: column;
+
+  @include element(main) {
+    flex: 1;
+    height: inherit;
+  }
+
+  @include element(footer) {
+    font-size: 0;
+    @include element(box){
+      display: block;
+      position: fixed;
+      width: 40%;
+      margin-left: 30%;
+      height: 1rem;
+      bottom: .2rem;
+      @include element(button) {
+        position: absolute;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  @include element(return-top) {
+    position: fixed;
+    display: none;
+
+    @media (max-width: 320px) {
+      transform: scale(.8);
+      transform-origin: right;
+    }
+  }
+
+  // Img Responsive
+  img {
+    max-width: 100%;
+  }
+}
+.fade_in{
+   transition:transform ease 0.2s ;
+   -webkit-transition: transform ease 0.2s ;
+
+   transform: translate(0px,1.5rem);
+   -ms-transform:translate(0px,1.5rem); /* IE 9 */
+   -webkit-transform:translate(0px,1.5rem);
+}
+.fade_out{
+   transition:transform ease 0.2s ;
+   -webkit-transition: transform ease 0.2s ;
+   transform: translate(0px,0px);
+   -ms-transform:translate(0px,0px); /* IE 9 */
+   -webkit-transform:translate(0px,0px);
+}

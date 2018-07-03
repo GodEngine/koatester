@@ -1,0 +1,31 @@
+//
+// Modal 0.2.0
+//
+// Created by 杜军
+// on 2017-08-07
+
+$dialog-bg: rgba(0, 0, 0, .8);
+
+@include block(modal)
+{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    max-width: 425px;
+    margin: 0 auto;
+
+    background-color: $dialog-bg;
+
+    @include state(show)
+    {
+        display: flex;
+    }
+    justify-content: center;
+    align-items: center;
+}

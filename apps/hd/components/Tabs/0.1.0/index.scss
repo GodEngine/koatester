@@ -1,0 +1,41 @@
+// on 2017-03-07 13:21
+
+@include block(tabs) {
+  @include element(nav) {
+    &:after,
+    &:before {
+      display: table;
+      content: " ";
+    }
+
+    &:after {
+      clear: both;
+    }
+
+    @include element(tab) {
+      float: left;
+      list-style: none;
+      margin-right: 24px;
+      padding: 8px 20px;
+      text-decoration: none;
+      color: #666;
+      cursor: pointer;
+    }
+
+    @include state(active) {
+      border-bottom: 2px solid #00c49f;
+      color: #00c49f;
+      cursor: default;
+    }
+  }
+
+  @include element(content) {
+    @include element(panel) {
+      display: none;
+    }
+
+    @include element(active) {
+      display: block;
+    }
+  }
+}

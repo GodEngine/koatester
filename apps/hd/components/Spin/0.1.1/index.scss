@@ -1,0 +1,27 @@
+// 2017-01-05 19:19
+
+@include block(spin) {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-bottom-color: transparent;
+  animation-name: spin-rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin-rotate {
+  0%   {
+    transform: rotate(0);
+  }
+
+  50%  {
+    transform: rotate(180deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}

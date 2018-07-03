@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>内容不见啦</title>
+  <style>
+    html{
+      height: 100%;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -76px;
+      left: 50%;
+      margin-left: -100px;
+      width: 200px;
+    }
+
+    .container img {
+      width: 101px;
+      height: 101px;
+    }
+
+    .tips {
+      margin-top: 25px;
+    }
+
+    .tip {
+      font-size: 15px;
+      color: #E1E1E1;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://dn-web-blued-cn.qbox.me/@/webapp/images/404.png" alt="">
+    <div class="tips">
+      <p class="tip">
+        内容不见啦，3秒后返回首页
+      </p>
+    </div>
+  </div>
+  <script src="{{sharebar}}"></script>
+  <script type="text/javascript">
+  new BluedShareBar();
+    setTimeout(function(){
+      location.href = getLang(navigator.language) === 1 ? 'https://m.blued.cn' : 'https://www.blued.com/en/';
+    }, 3000);
+
+    function getLang (lang) {
+      // 1: 国内 2: 国外
+      if (/^zh/i.test(lang)) {
+        return 1;
+      }
+      return 2;
+    }
+  </script>
+</body>
+
+</html>

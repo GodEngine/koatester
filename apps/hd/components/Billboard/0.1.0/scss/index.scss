@@ -1,0 +1,180 @@
+//
+// Billboard
+//
+// @Author: Liu Qian <qianliu>
+// @Email:  112486391@qq.com
+
+@import 'sprite';
+
+$billboard-first-bg-color: #ffbe01;
+$billboard-first-border-color: #ffdb88;
+$billboard-second-bg-color: #8e9baa;
+$billboard-second-border-color: #b7c3cf;
+$billboard-third-bg-color: #ab785d;
+$billboard-third-border-color: #d0a98c;
+
+.billboard {
+  counter-reset: section;
+  list-style-type: none;
+
+  > li {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &+li {
+      .billboard__wrapper {
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+    }
+  }
+
+  > li::before {
+    counter-increment: section;
+    content: counters(section, '') '';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 22px;
+    margin-right: 8px;
+    margin-left: -2px;
+
+    font-size: 14px;
+    text-align: center;
+
+    border: 2px solid transparent;
+  }
+
+  // 前三名
+  > li:nth-child(-n+3) {
+    &::before {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .billboard__wrapper__avatar {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: -2px;
+        right: -8px;
+
+        content: '';
+
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  // 冠军
+  > li:nth-child(1) {
+    &::before {
+      background-color: $billboard-first-bg-color;
+      border-color: $billboard-first-border-color;
+    }
+
+    .billboard__wrapper__avatar {
+      border-color: $billboard-first-border-color;
+
+      &::before {
+        @include retina-sprite($i-first-group);
+      }
+    }
+  }
+
+  // 亚军
+  > li:nth-child(2) {
+    &::before {
+      background-color: $billboard-second-bg-color;
+      border-color: $billboard-second-border-color;
+    }
+
+    .billboard__wrapper__avatar {
+      border-color: $billboard-second-border-color;
+
+      &::before {
+        @include retina-sprite($i-second-group);
+      }
+    }
+  }
+
+  // 季军
+  > li:nth-child(3) {
+    &::before {
+      background-color: $billboard-third-bg-color;
+      border-color: $billboard-third-border-color;
+    }
+
+    .billboard__wrapper__avatar {
+      border-color: $billboard-third-border-color;
+
+      &::before {
+        @include retina-sprite($i-third-group);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    margin-right: 12px;
+    padding: 15px 0;
+
+    &__avatar {
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+
+      border: 2px solid transparent;
+      border-radius: 50%;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &__body {
+      flex: 1;
+      margin-top: 4px;
+      margin-left: 15px;
+      min-width: 0;
+
+      > h6 {
+        font-size: 18px;
+        font-weight: normal;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include iphone5 {
+          font-size: 16px;
+        }
+      }
+
+      &__counters {
+        display: flex;
+        align-items: center;
+
+        > li {
+          margin-top: 2px;
+        }
+
+        &__counter {
+          display: inline-block;
+          margin-left: 5px;
+
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

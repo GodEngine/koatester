@@ -1,0 +1,29 @@
+@include block(header) {
+  position: relative;
+
+  overflow: hidden;
+
+  @include element(banner) {
+    > img {
+      display: block; // 解决图片与下方元素空白
+    }
+  }
+  @include element(btn) {
+    position: absolute;
+    z-index: 1; // 浮在上层
+    top: 0;
+    right: 17px;
+
+    > i {
+      // 解决空白符导致的不能紧贴顶部的定位问题
+      float: left;
+    }
+  }
+  @include element(content) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

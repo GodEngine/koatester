@@ -1,0 +1,54 @@
+div[data-drag] {
+  position: absolute;
+  @include position(absolute, 0 null null 0);
+  z-index: 997;
+  width: 150px;
+  // 防止长按保存 但是端内失效
+  -webkit-touch-callout: none;
+  img {
+    -webkit-touch-callout: none
+  }
+}
+
+img[data-btns] {
+  display: none;
+  z-index: 999;
+  display: none;
+}
+
+.btn_left {
+  @include position(absolute, null -15px 50px null);
+}
+
+.btn_right {
+  @include position(absolute, null null -15px 55px);
+}
+
+.btn_delete {
+  @include position(absolute, 0 null null 0);
+  z-index: 900;
+  margin-left: -9px;
+  margin-top: -9px;
+}
+
+div[data-drag].target {
+  z-index: 999;
+  border: 1px solid #fff;
+
+  img {
+    padding: 1px;
+  }
+
+  img[data-btns] {
+    display: block !important;
+  }
+}
+
+.forHideImg {
+  b {
+    @include position(absolute, 0 null null 0);
+    width: 100%;
+    display: block;
+    z-index: 9;
+  }
+}
