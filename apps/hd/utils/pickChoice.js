@@ -6,8 +6,6 @@
  *  - [[ratio, value]]
  *    e.g. [[10, 'apples'], [20, 'oranges'], [70, 'bananas']]
  * @return {array.value}
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-16 14:56
  */
 

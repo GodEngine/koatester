@@ -7,8 +7,6 @@
  * @param  {Object} data request body {Object/FormData}
  * @return {Promise}
  *
- * @Author: Liu Qian <qianliu>
- * @Email:  112486391@qq.com
  */
 
 import checkType from './checkType'

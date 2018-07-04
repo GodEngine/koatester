@@ -4,8 +4,6 @@
  * @param  {any}     param
  * @param  {string}  type
  * @return {boolean}
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-16 15:06
  */
 

@@ -19,5 +19,6 @@ node_modules
 public
 .imdone
 /libs/qn.js
+/apps/hd/src
 /gulp-tmpl/gulpfile.js
 *.DS_Store

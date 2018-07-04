@@ -2,9 +2,7 @@
  * Preload img
  *
  * @param {String} src Img src
- *
- * @Author: 刘谦 <qianliu>
- * @Email:  112486391@qq.com
+
  */
 
 export default (src) => {

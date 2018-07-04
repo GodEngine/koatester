@@ -1,7 +1,5 @@
 /**
  * Webpack.plugins
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-27 16:16
  */
 
@@ -134,7 +132,7 @@ export default ({
           },
           customTemplates: {
             'hbs': path.resolve(__dirname, '../spritesmith.hbs'),
-            'hbs_retina': path.resolve(__dirname, '../spritesmith_retina.hbs'),
+            'hbs_retina': path.resolve(__dirname, '../spritesmith_retina.hbs')
           }
         }
 

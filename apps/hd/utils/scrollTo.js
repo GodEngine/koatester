@@ -3,8 +3,7 @@
  *
  * @param {number} to   页面滚动到的位置
  * @param {number} time 指定毫秒内
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
+
  * on 2017-01-25 19:11
  */
 

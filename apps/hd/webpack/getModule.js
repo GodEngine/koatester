@@ -1,16 +1,4 @@
 /**
- * @Author: danlan
- * @Date:   2018-03-09T18:54:46+08:00
- * @Last modified by:   danlan
- * @Last modified time: 2018-03-27T15:12:08+08:00
- */
-
-
-
-/**
- * Webpack.module
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-27 16:02
  */
 
@@ -89,7 +77,7 @@ export default ({
           options: {
             // babel-loader 可以缓存处理过的模块，对于没有修改过的文件不会再重新编译，
             // cacheDirectory 有着2倍以上的速度提升，这对于 rebuild 有着非常大的性能提升
-            cacheDirectory: true,
+            cacheDirectory: true
             // 启用 Tree Shaking
             // webpack@2 开始引入 tree-shaking 技术，通过静态分析 ES6 语法，
             // 可以删除没有被使用的模块。它只对 ES6 的模块有效，

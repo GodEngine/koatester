@@ -1,7 +1,5 @@
 /**
  * 让 Loaders 可以多进程去处理文件，同时还可利用缓存来使 rebuild 更快
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-27 18:35
  */
 

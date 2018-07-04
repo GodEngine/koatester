@@ -1,7 +1,5 @@
 /**
  * Webpack.resolve
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-27 16:09
  */
 
@@ -9,7 +7,7 @@ import path from 'path'
 
 export default ({ isProd, needReact }) => ({
   extensions: [
-    '.jsx', '.js', 
+    '.jsx', '.js',
     '.web.ts', '.web.tsx', '.web.js', '.web.jsx',
     '.ts', '.tsx',
     '.json'

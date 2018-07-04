@@ -3,8 +3,6 @@
  *
  * @param  {object} obj params
  * @return {string} querystring
- *
- * Created by 刘谦 <qianliu> 112486391@qq.com
  * on 2017-02-05 11:21
  */
 
