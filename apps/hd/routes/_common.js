@@ -1,8 +1,6 @@
 /*
- * @Author: 孟闲闲 -- 项目基本框架
- * @Date: 2018-03-12 16:19:54
  * @Last modified by:   godengine
- * @Last modified time: 2018-07-03T20:47:43+08:00
+ * @Last modified time: 2018-07-05T10:12:31+08:00
  */
 const req = require('bd-require')
 const hashids = req('libs/hashids')
