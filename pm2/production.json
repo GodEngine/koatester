@@ -4,6 +4,7 @@
   "error_file": "/data/logs/pm2/webapp/error.log",
   "out_file": "/data/logs/pm2/webapp/out.log",
   "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "max_memory_restart": "40M",
   "instances": 0,
   "merge_logs": true,
   "exec_mode": "cluster",
